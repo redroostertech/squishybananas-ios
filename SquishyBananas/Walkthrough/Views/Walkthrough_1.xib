@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="eAU-yV-E3u">
+                    <rect key="frame" x="66" y="76" width="282" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="giT-gM-oeE"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video chat for book readings" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMQ-za-az9">
+                    <rect key="frame" x="66" y="234" width="282" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="SMQ-za-az9" firstAttribute="trailing" secondItem="eAU-yV-E3u" secondAttribute="trailing" id="01j-c0-X17"/>
+                <constraint firstItem="SMQ-za-az9" firstAttribute="top" secondItem="eAU-yV-E3u" secondAttribute="bottom" constant="8" id="22O-J9-Pqk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eAU-yV-E3u" secondAttribute="trailing" constant="66" id="3WV-Qz-MZt"/>
+                <constraint firstItem="eAU-yV-E3u" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="66" id="A4n-dL-1jg"/>
+                <constraint firstItem="eAU-yV-E3u" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="32" id="IYA-s4-Xvx"/>
+                <constraint firstItem="SMQ-za-az9" firstAttribute="leading" secondItem="eAU-yV-E3u" secondAttribute="leading" id="eP0-bd-3ka"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo" width="2498" height="2006"/>
+    </resources>
+</document>

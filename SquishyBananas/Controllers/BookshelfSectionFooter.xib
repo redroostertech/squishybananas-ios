@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XoU-Qa-8f6">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ni-Vl-pz6">
+                            <rect key="frame" x="8" y="10" width="304" height="30"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <state key="normal" title="View More">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.99094194170000005" green="0.88048356770000002" blue="0.1721152067" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstItem="9ni-Vl-pz6" firstAttribute="leading" secondItem="XoU-Qa-8f6" secondAttribute="leading" constant="8" id="2ud-H8-Ozd"/>
+                        <constraint firstAttribute="trailing" secondItem="9ni-Vl-pz6" secondAttribute="trailing" constant="8" id="Qfn-jQ-qdT"/>
+                        <constraint firstAttribute="bottom" secondItem="9ni-Vl-pz6" secondAttribute="bottom" constant="10" id="wm2-EZ-WBF"/>
+                        <constraint firstItem="9ni-Vl-pz6" firstAttribute="top" secondItem="XoU-Qa-8f6" secondAttribute="top" constant="10" id="xR9-pg-1UB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="XoU-Qa-8f6" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="KWE-fv-rhf"/>
+                <constraint firstItem="XoU-Qa-8f6" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="umu-cb-fkp"/>
+                <constraint firstAttribute="bottom" secondItem="XoU-Qa-8f6" secondAttribute="bottom" id="zIY-K8-afI"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="XoU-Qa-8f6" secondAttribute="trailing" id="zwr-C4-0xd"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <point key="canvasLocation" x="137.68115942028987" y="87.723214285714278"/>
+        </collectionReusableView>
+    </objects>
+</document>
