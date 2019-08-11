@@ -5,37 +5,37 @@ import UIKit
 extension NSMutableAttributedString {
     
     func makeBold(_ text: String, ofSize size: CGFloat) -> NSMutableAttributedString {
-        let attrs: [NSAttributedStringKey: Any] = [.font: UIFont.boldSystemFont(ofSize: size)]
+      let attrs: [NSAttributedString.Key: Any] = [.font: UIFont.boldSystemFont(ofSize: size)]
         let boldString = NSMutableAttributedString(string:text, attributes: attrs)
         append(boldString)
         return self
     }
     
     func makeBold(usingFont font: UIFont, forText text: String) -> NSMutableAttributedString {
-        let attrs: [NSAttributedStringKey: Any] = [.font: font]
+      let attrs: [NSAttributedString.Key: Any] = [.font: font]
         append(text: text, andAttributes: attrs)
         return self
     }
     
     func makeNormal(_ text:String, ofSize size: CGFloat)->NSMutableAttributedString {
-        let attrs: [NSAttributedStringKey: Any] = [.font: UIFont.boldSystemFont(ofSize: size)]
+      let attrs: [NSAttributedString.Key: Any] = [.font: UIFont.boldSystemFont(ofSize: size)]
         append(text: text, andAttributes: attrs)
         return self
     }
     
     func makeNormal(usingFont font: UIFont, forText text: String) -> NSMutableAttributedString {
-        let attrs: [NSAttributedStringKey: Any] = [.font: font]
+      let attrs: [NSAttributedString.Key: Any] = [.font: font]
         append(text: text, andAttributes: attrs)
         return self
     }
     
     func makeWithColor(_ text: String, color: UIColor) -> NSMutableAttributedString {
-        let attrs = [NSAttributedStringKey.foregroundColor: color]
+      let attrs = [NSAttributedString.Key.foregroundColor: color]
         append(text: text, andAttributes: attrs)
         return self
     }
     
-    private func append(text: String, andAttributes attrs: [NSAttributedStringKey: Any]){
+  private func append(text: String, andAttributes attrs: [NSAttributedString.Key: Any]){
         let string = NSMutableAttributedString(string:text, attributes: attrs)
         append(string)
     }

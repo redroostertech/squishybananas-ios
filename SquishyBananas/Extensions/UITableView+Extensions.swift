@@ -24,20 +24,12 @@ extension UITableView {
 }
 
 extension UITableViewCell {
-  static var identifier: String {
-    return String(describing: self)
-  }
-
   static var nib: UINib {
     return UINib(nibName: self.identifier, bundle: nil)
   }
 }
 
-extension UICollectionViewCell {
-  static var identifier: String {
-    return String(describing: self)
-  }
-
+extension UICollectionReusableView {
   static var nib: UINib {
     return UINib(nibName: self.identifier, bundle: nil)
   }

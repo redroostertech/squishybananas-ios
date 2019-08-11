@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="BookshelfSectionFooter" customModule="SquishyBananas" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
@@ -25,12 +25,16 @@
                             <state key="normal" title="View More">
                                 <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="viewMore:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="6KY-uU-Scp"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.99094194170000005" green="0.88048356770000002" blue="0.1721152067" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstItem="9ni-Vl-pz6" firstAttribute="leading" secondItem="XoU-Qa-8f6" secondAttribute="leading" constant="8" id="2ud-H8-Ozd"/>
                         <constraint firstAttribute="trailing" secondItem="9ni-Vl-pz6" secondAttribute="trailing" constant="8" id="Qfn-jQ-qdT"/>
+                        <constraint firstAttribute="height" constant="50" id="ZVt-il-Gnr"/>
                         <constraint firstAttribute="bottom" secondItem="9ni-Vl-pz6" secondAttribute="bottom" constant="10" id="wm2-EZ-WBF"/>
                         <constraint firstItem="9ni-Vl-pz6" firstAttribute="top" secondItem="XoU-Qa-8f6" secondAttribute="top" constant="10" id="xR9-pg-1UB"/>
                     </constraints>
@@ -43,6 +47,9 @@
                 <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="XoU-Qa-8f6" secondAttribute="trailing" id="zwr-C4-0xd"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="viewMoreButton" destination="9ni-Vl-pz6" id="GW4-dE-V9j"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="87.723214285714278"/>
         </collectionReusableView>
     </objects>

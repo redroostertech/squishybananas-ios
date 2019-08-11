@@ -10,9 +10,9 @@ import UIKit
 
 class BookshelfSectionHeader: UICollectionReusableView {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
+  @IBOutlet weak var sectionHeaderLabel: UILabel!
+
+  func configure(sectionTitle: String) {
+    sectionHeaderLabel.text = sectionTitle
+  }
 }

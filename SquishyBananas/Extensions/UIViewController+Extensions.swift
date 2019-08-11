@@ -52,7 +52,7 @@ extension UIViewController {
             }
             if let tintcolor = tintColor {
                 navigationcontroller.navigationBar.tintColor = tintcolor
-                navigationcontroller.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: tintcolor]
+              navigationcontroller.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: tintcolor]
             }
             if text != nil {
                 updateNavigationBar(title: text!)
@@ -179,12 +179,12 @@ extension UIViewController {
     
     func setBackground(_ imageName: String, onView view: UIView) {
         if let view = self.view {
-            let image = UIImage(named: imageName)
-            let imageView = UIImageView(frame: view.frame)
-            imageView.contentMode = .scaleAspectFill
-            imageView.image = image
-            view.addSubview(imageView)
-            view.sendSubview(toBack: imageView)
+          let image = UIImage(named: imageName)
+          let imageView = UIImageView(frame: view.frame)
+          imageView.contentMode = .scaleAspectFill
+          imageView.image = image
+          view.addSubview(imageView)
+          view.sendSubviewToBack(imageView)
         }
     }
     
@@ -287,7 +287,7 @@ extension UIViewController {
   public func displaySpinner(onView : UIView) -> UIView {
     let spinnerView = UIView.init(frame: onView.bounds)
     spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
-    let ai = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
+    let ai = UIActivityIndicatorView.init(style: .whiteLarge)
     ai.startAnimating()
     ai.center = spinnerView.center
 

@@ -57,9 +57,12 @@
                                 <state key="normal" title="Get Started" backgroundImage="button_bg_primary">
                                     <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="SRy-mZ-bG1" kind="show" id="Fof-4d-0uT"/>
+                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z1R-2G-Ox0">
-                                <rect key="frame" x="0.0" y="44" width="414" height="545"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -71,7 +74,6 @@
                             <constraint firstItem="7Nb-4s-FVJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="73" id="UO4-eG-YmR"/>
                             <constraint firstAttribute="bottom" secondItem="5hb-Nk-6cn" secondAttribute="bottom" constant="-8" id="X7B-2E-KTI"/>
                             <constraint firstItem="z1R-2G-Ox0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YY1-sb-Ev9"/>
-                            <constraint firstItem="pnl-M2-zYQ" firstAttribute="top" secondItem="z1R-2G-Ox0" secondAttribute="bottom" constant="42" id="dX6-6M-Oy6"/>
                             <constraint firstAttribute="bottom" secondItem="CoI-ep-0hT" secondAttribute="bottom" constant="-8" id="ecR-gI-tlk"/>
                             <constraint firstItem="pnl-M2-zYQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="fX0-4G-OaG"/>
                             <constraint firstItem="PLt-2F-DLQ" firstAttribute="top" secondItem="pnl-M2-zYQ" secondAttribute="bottom" constant="42" id="gIp-PH-fad"/>
@@ -79,10 +81,16 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Nb-4s-FVJ" secondAttribute="trailing" constant="72" id="mRz-lQ-XRG"/>
                             <constraint firstItem="PLt-2F-DLQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ojO-d2-Ssj"/>
                             <constraint firstItem="5hb-Nk-6cn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ovN-j9-wBc"/>
+                            <constraint firstAttribute="bottom" secondItem="z1R-2G-Ox0" secondAttribute="bottom" id="vpG-Gv-RR8"/>
                             <constraint firstItem="7Nb-4s-FVJ" firstAttribute="top" secondItem="PLt-2F-DLQ" secondAttribute="bottom" constant="20" id="xBA-X5-NpV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="getStartedButton" destination="pnl-M2-zYQ" id="fhH-q1-daZ"/>
+                        <outlet property="pageControl" destination="PLt-2F-DLQ" id="XjI-sF-2Rv"/>
+                        <outlet property="scrollView" destination="z1R-2G-Ox0" id="f3V-VA-BuX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -110,7 +118,7 @@
                                     <constraint firstAttribute="height" constant="75" id="ssl-zn-CKq"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shi-Sb-Wju">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shi-Sb-Wju">
                                 <rect key="frame" x="57" y="631" width="300" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="LGo-94-ifB"/>
@@ -118,6 +126,9 @@
                                 <state key="normal" title="Login" backgroundImage="button_bg_primary">
                                     <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Tm3-c1-5dC" kind="show" id="oDM-7W-4A4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1r-tE-gmZ">
                                 <rect key="frame" x="57" y="689" width="300" height="50"/>
@@ -164,6 +175,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="E63-HQ-eeo" firstAttribute="trailing" secondItem="nKf-LP-quj" secondAttribute="trailing" constant="66" id="4XS-t6-2oV"/>
+                            <constraint firstItem="W1r-tE-gmZ" firstAttribute="top" secondItem="shi-Sb-Wju" secondAttribute="bottom" constant="8" id="5Gg-N3-E5c"/>
                             <constraint firstItem="E63-HQ-eeo" firstAttribute="trailing" secondItem="OVM-iZ-P2s" secondAttribute="trailing" constant="66" id="ALz-19-fAi"/>
                             <constraint firstItem="W2h-sn-Hih" firstAttribute="top" secondItem="W1r-tE-gmZ" secondAttribute="bottom" constant="90" id="DBj-ml-tRw"/>
                             <constraint firstItem="OVM-iZ-P2s" firstAttribute="top" secondItem="nKf-LP-quj" secondAttribute="bottom" constant="24" id="IE2-0M-By1"/>
@@ -197,7 +209,7 @@
             <objects>
                 <viewController storyboardIdentifier="vcBookshelf" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CNZ-Xs-7Jt" customClass="vcBookshelf" customModule="SquishyBananas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j4v-Lt-DMi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFi-na-pzX">
@@ -238,6 +250,10 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="CNZ-Xs-7Jt" id="rJS-Ic-rkL"/>
+                                    <outlet property="delegate" destination="CNZ-Xs-7Jt" id="7cG-1h-LRq"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.99874800443649292" green="0.87277317047119141" blue="0.04968426376581192" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -278,7 +294,7 @@
                                 <items>
                                     <navigationItem id="c5Y-Df-r17">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="NKj-dq-lNl">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hFQ-SV-hMt">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hFQ-SV-hMt">
                                                 <rect key="frame" x="20" y="0.0" width="147" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
@@ -297,15 +313,37 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KcH-PG-tmZ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.99094194170000005" green="0.88048356770000002" blue="0.1721152067" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LIZ-0Z-1dw">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="uhZ-HC-Nbl" id="UhE-Me-ji7"/>
+                                    <outlet property="delegate" destination="uhZ-HC-Nbl" id="luw-5C-6kC"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.99094194170000005" green="0.88048356770000002" blue="0.1721152067" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="KcH-PG-tmZ" firstAttribute="leading" secondItem="z5Z-AN-GcZ" secondAttribute="leading" id="6sC-Z5-DPo"/>
                             <constraint firstItem="u6N-r4-lsv" firstAttribute="top" secondItem="z5Z-AN-GcZ" secondAttribute="top" id="7mg-B2-0R9"/>
+                            <constraint firstItem="z5Z-AN-GcZ" firstAttribute="bottom" secondItem="KcH-PG-tmZ" secondAttribute="bottom" id="MJN-1z-38j"/>
                             <constraint firstItem="u6N-r4-lsv" firstAttribute="leading" secondItem="z5Z-AN-GcZ" secondAttribute="leading" id="PaI-Sb-sMY"/>
+                            <constraint firstItem="z5Z-AN-GcZ" firstAttribute="trailing" secondItem="KcH-PG-tmZ" secondAttribute="trailing" id="UOP-om-CvY"/>
+                            <constraint firstItem="KcH-PG-tmZ" firstAttribute="top" secondItem="u6N-r4-lsv" secondAttribute="bottom" id="hql-Ic-cDB"/>
                             <constraint firstItem="u6N-r4-lsv" firstAttribute="trailing" secondItem="z5Z-AN-GcZ" secondAttribute="trailing" id="lOA-V0-zrn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="z5Z-AN-GcZ"/>
                     </view>
+                    <connections>
+                        <outlet property="mainCollection" destination="KcH-PG-tmZ" id="zhc-u6-iEi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xs6-0p-anP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -316,7 +354,7 @@
             <objects>
                 <viewController storyboardIdentifier="vcBookmark" useStoryboardIdentifierAsRestorationIdentifier="YES" id="H9l-ck-wor" customClass="vcBookmark" customModule="SquishyBananas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VJ2-r8-dXz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgM-dZ-Uce">
@@ -328,7 +366,7 @@
                                 <items>
                                     <navigationItem id="6Kw-O6-xKc">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="cV0-ku-ffl">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4mx-s7-gir">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4mx-s7-gir">
                                                 <rect key="frame" x="20" y="0.0" width="153" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
@@ -347,33 +385,56 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bkw-Ta-Nkl">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" red="0.99094194170000005" green="0.88048356770000002" blue="0.1721152067" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tGy-ZE-dC3">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="H9l-ck-wor" id="fcH-Zc-0T8"/>
+                                    <outlet property="delegate" destination="H9l-ck-wor" id="BQn-yn-xo4"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.99094194173812866" green="0.88048356771469116" blue="0.17211520671844482" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="bkw-Ta-Nkl" firstAttribute="bottom" secondItem="Z8h-Nv-qry" secondAttribute="bottom" id="3Fe-CW-URE"/>
                             <constraint firstItem="vgM-dZ-Uce" firstAttribute="leading" secondItem="Z8h-Nv-qry" secondAttribute="leading" id="8sS-w5-Nh0"/>
                             <constraint firstItem="vgM-dZ-Uce" firstAttribute="top" secondItem="Z8h-Nv-qry" secondAttribute="top" id="FGB-bw-aCn"/>
                             <constraint firstItem="vgM-dZ-Uce" firstAttribute="trailing" secondItem="Z8h-Nv-qry" secondAttribute="trailing" id="OAE-dh-YlP"/>
+                            <constraint firstItem="bkw-Ta-Nkl" firstAttribute="top" secondItem="vgM-dZ-Uce" secondAttribute="bottom" id="Qg9-nd-TnI"/>
+                            <constraint firstItem="bkw-Ta-Nkl" firstAttribute="trailing" secondItem="Z8h-Nv-qry" secondAttribute="trailing" id="lVK-zF-DWC"/>
+                            <constraint firstItem="bkw-Ta-Nkl" firstAttribute="leading" secondItem="Z8h-Nv-qry" secondAttribute="leading" id="w6S-TM-snq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Z8h-Nv-qry"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="bookmark" id="vsE-sw-YSS"/>
+                    <connections>
+                        <outlet property="mainCollection" destination="bkw-Ta-Nkl" id="rHL-3Z-8DI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pbr-l3-P1R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="728" y="-277"/>
+            <point key="canvasLocation" x="727.536231884058" y="-277.23214285714283"/>
         </scene>
         <!--Vc Custom Tab Bar-->
         <scene sceneID="Y28-7O-Vqc">
             <objects>
                 <tabBarController storyboardIdentifier="vcCustomTabBar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Tm3-c1-5dC" customClass="vcCustomTabBar" customModule="SquishyBananas" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="95y-ad-sGv">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="95y-ad-sGv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.99094194170000005" green="0.88048356770000002" blue="0.1721152067" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
-                        <segue destination="H9l-ck-wor" kind="relationship" relationship="viewControllers" id="4ey-46-9JG"/>
                         <segue destination="CNZ-Xs-7Jt" kind="relationship" relationship="viewControllers" id="98S-qN-P4e"/>
+                        <segue destination="H9l-ck-wor" kind="relationship" relationship="viewControllers" id="4ey-46-9JG"/>
                         <segue destination="3TO-dc-paL" kind="relationship" relationship="viewControllers" id="bBY-rG-oog"/>
                     </connections>
                 </tabBarController>
@@ -386,7 +447,7 @@
             <objects>
                 <viewController storyboardIdentifier="vcProfile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3TO-dc-paL" customClass="vcProfile" customModule="SquishyBananas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f9F-mb-Rbe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0Ot-7h-FaG"/>
