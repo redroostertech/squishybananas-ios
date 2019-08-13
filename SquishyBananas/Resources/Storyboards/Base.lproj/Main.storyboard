@@ -294,13 +294,15 @@
                                 <items>
                                     <navigationItem id="c5Y-Df-r17">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="NKj-dq-lNl">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hFQ-SV-hMt">
-                                                <rect key="frame" x="20" y="0.0" width="147" height="44"/>
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hFQ-SV-hMt">
+                                                <rect key="frame" x="20" y="11" width="18" height="22"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
-                                                <state key="normal" title="View More">
+                                                <state key="normal" image="back">
                                                     <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="goBack:" destination="uhZ-HC-Nbl" eventType="touchUpInside" id="Wif-1Z-Hi8"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="NCi-pL-j8m">
@@ -342,6 +344,7 @@
                         <viewLayoutGuide key="safeArea" id="z5Z-AN-GcZ"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="hFQ-SV-hMt" id="aZ1-PZ-Db3"/>
                         <outlet property="mainCollection" destination="KcH-PG-tmZ" id="zhc-u6-iEi"/>
                     </connections>
                 </viewController>
@@ -481,24 +484,43 @@
                                                 <state key="normal" image="back">
                                                     <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="goBack:" destination="NQ8-Vf-O7X" eventType="touchUpInside" id="udH-mu-RIC"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z00-Yt-Owe">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.99094194170000005" green="0.88048356770000002" blue="0.1721152067" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="NQ8-Vf-O7X" id="2xA-ke-SMo"/>
+                                    <outlet property="delegate" destination="NQ8-Vf-O7X" id="1F3-T2-IcU"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.99094194170000005" green="0.88048356770000002" blue="0.1721152067" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="z00-Yt-Owe" firstAttribute="leading" secondItem="zkW-ha-iUy" secondAttribute="leading" id="8yu-XP-ad9"/>
+                            <constraint firstItem="z00-Yt-Owe" firstAttribute="trailing" secondItem="zkW-ha-iUy" secondAttribute="trailing" id="Rh1-3g-JVd"/>
+                            <constraint firstItem="z00-Yt-Owe" firstAttribute="bottom" secondItem="zkW-ha-iUy" secondAttribute="bottom" id="Tzx-C6-Slf"/>
                             <constraint firstItem="5ON-6U-j5x" firstAttribute="trailing" secondItem="zkW-ha-iUy" secondAttribute="trailing" id="VxM-6p-4b0"/>
                             <constraint firstItem="5ON-6U-j5x" firstAttribute="top" secondItem="zkW-ha-iUy" secondAttribute="top" id="aVj-CC-6OG"/>
+                            <constraint firstItem="z00-Yt-Owe" firstAttribute="top" secondItem="5ON-6U-j5x" secondAttribute="bottom" id="ljh-gi-svf"/>
                             <constraint firstItem="5ON-6U-j5x" firstAttribute="leading" secondItem="zkW-ha-iUy" secondAttribute="leading" id="rij-vk-nPq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zkW-ha-iUy"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="yYv-8e-zXu" id="aEJ-so-CXK"/>
+                        <outlet property="mainCollection" destination="z00-Yt-Owe" id="bki-rY-jGG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iac-ex-RoW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="728" y="413"/>
+            <point key="canvasLocation" x="727.536231884058" y="412.5"/>
         </scene>
         <!--Vc Contact List-->
         <scene sceneID="KAZ-02-StP">

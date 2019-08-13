@@ -71,6 +71,12 @@
 		D7981D7D23006578004FFE0B /* Walkthrough_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7981D7C23006578004FFE0B /* Walkthrough_2.swift */; };
 		D7981D7F230066DB004FFE0B /* Walkthrough_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7981D7E230066DB004FFE0B /* Walkthrough_3.swift */; };
 		D7981D812300675B004FFE0B /* Walkthrough_4.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7981D802300675B004FFE0B /* Walkthrough_4.swift */; };
+		D7981D84230117C1004FFE0B /* BookInfoDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7981D82230117C1004FFE0B /* BookInfoDetailCell.swift */; };
+		D7981D85230117C1004FFE0B /* BookInfoDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7981D83230117C1004FFE0B /* BookInfoDetailCell.xib */; };
+		D7981FD123020E70004FFE0B /* BookSynopsisCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7981FCF23020E70004FFE0B /* BookSynopsisCell.swift */; };
+		D7981FD223020E70004FFE0B /* BookSynopsisCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7981FD023020E70004FFE0B /* BookSynopsisCell.xib */; };
+		D7981FD523030EF1004FFE0B /* BookFromAuthorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7981FD323030EF1004FFE0B /* BookFromAuthorCell.swift */; };
+		D7981FD623030EF1004FFE0B /* BookFromAuthorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7981FD423030EF1004FFE0B /* BookFromAuthorCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -141,6 +147,12 @@
 		D7981D7C23006578004FFE0B /* Walkthrough_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walkthrough_2.swift; sourceTree = "<group>"; };
 		D7981D7E230066DB004FFE0B /* Walkthrough_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walkthrough_3.swift; sourceTree = "<group>"; };
 		D7981D802300675B004FFE0B /* Walkthrough_4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walkthrough_4.swift; sourceTree = "<group>"; };
+		D7981D82230117C1004FFE0B /* BookInfoDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfoDetailCell.swift; sourceTree = "<group>"; };
+		D7981D83230117C1004FFE0B /* BookInfoDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookInfoDetailCell.xib; sourceTree = "<group>"; };
+		D7981FCF23020E70004FFE0B /* BookSynopsisCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSynopsisCell.swift; sourceTree = "<group>"; };
+		D7981FD023020E70004FFE0B /* BookSynopsisCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookSynopsisCell.xib; sourceTree = "<group>"; };
+		D7981FD323030EF1004FFE0B /* BookFromAuthorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFromAuthorCell.swift; sourceTree = "<group>"; };
+		D7981FD423030EF1004FFE0B /* BookFromAuthorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookFromAuthorCell.xib; sourceTree = "<group>"; };
 		DC2571E8464BAA5502434B6C /* Pods_SquishyBananas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SquishyBananas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -252,6 +264,12 @@
 				D7981D1422FE22A7004FFE0B /* vcRecentBooks.xib */,
 				D7981D1722FE22BF004FFE0B /* vcCallActivity.swift */,
 				D7981D1822FE22BF004FFE0B /* vcCallActivity.xib */,
+				D7981D82230117C1004FFE0B /* BookInfoDetailCell.swift */,
+				D7981D83230117C1004FFE0B /* BookInfoDetailCell.xib */,
+				D7981FCF23020E70004FFE0B /* BookSynopsisCell.swift */,
+				D7981FD023020E70004FFE0B /* BookSynopsisCell.xib */,
+				D7981FD323030EF1004FFE0B /* BookFromAuthorCell.swift */,
+				D7981FD423030EF1004FFE0B /* BookFromAuthorCell.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -398,7 +416,10 @@
 				D7981D2E22FF3E97004FFE0B /* BookshelfSectionHeader.xib in Resources */,
 				D7981D1A22FE22BF004FFE0B /* vcCallActivity.xib in Resources */,
 				D7981D0222FDA94E004FFE0B /* Walkthrough_1.xib in Resources */,
+				D7981FD223020E70004FFE0B /* BookSynopsisCell.xib in Resources */,
+				D7981D85230117C1004FFE0B /* BookInfoDetailCell.xib in Resources */,
 				D7981D1622FE22A7004FFE0B /* vcRecentBooks.xib in Resources */,
+				D7981FD623030EF1004FFE0B /* BookFromAuthorCell.xib in Resources */,
 				D7981CF622FC52F8004FFE0B /* LaunchScreen.storyboard in Resources */,
 				D7981D3622FF4F9A004FFE0B /* BookshelfItem.xib in Resources */,
 				D7981D0822FDA9D9004FFE0B /* Walkthrough_4.xib in Resources */,
@@ -476,6 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7981D2022FE230F004FFE0B /* vcProfile.swift in Sources */,
+				D7981D84230117C1004FFE0B /* BookInfoDetailCell.swift in Sources */,
 				D7981D6A22FF5047004FFE0B /* UIButton+Extensions.swift in Sources */,
 				D7981D5D22FF5047004FFE0B /* Strings+Extensions.swift in Sources */,
 				D7981D6122FF5047004FFE0B /* Doubles+Extensions.swift in Sources */,
@@ -496,6 +518,7 @@
 				D7981D2622FE2342004FFE0B /* vcContactList.swift in Sources */,
 				D7981CEB22FC52F6004FFE0B /* vcHome.swift in Sources */,
 				D7981D6022FF5047004FFE0B /* UILabel+Extensions.swift in Sources */,
+				D7981FD123020E70004FFE0B /* BookSynopsisCell.swift in Sources */,
 				D7981D5E22FF5047004FFE0B /* UIView+Extensions.swift in Sources */,
 				D7981D7222FF54BB004FFE0B /* Configuration.swift in Sources */,
 				D7981CF122FC52F6004FFE0B /* SquishyBananas.xcdatamodeld in Sources */,
@@ -518,6 +541,7 @@
 				D7981D7B230062C8004FFE0B /* Walkthrough_1.swift in Sources */,
 				D7981D1222FE21CE004FFE0B /* vcCustomTabBar.swift in Sources */,
 				D7981D7422FF55A8004FFE0B /* CustomLabel+Designable.swift in Sources */,
+				D7981FD523030EF1004FFE0B /* BookFromAuthorCell.swift in Sources */,
 				D7981D6422FF5047004FFE0B /* CustomStringConvertible+Extensions.swift in Sources */,
 				D7981D6D22FF546F004FFE0B /* RandomStringGenerator.swift in Sources */,
 				D7981D5422FF5047004FFE0B /* UIColors+Extensions.swift in Sources */,

@@ -10,8 +10,8 @@ import UIKit
 
 class vcViewMoreBook: UIViewController {
 
-
   @IBOutlet weak var mainCollection: UICollectionView!
+  @IBOutlet weak var backButton: UIButton!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -21,6 +21,11 @@ class vcViewMoreBook: UIViewController {
 
     mainCollection.reloadData()
   }
+
+  @IBAction func goBack(_ sender: UIButton) {
+    self.dismiss(animated: true, completion: nil)
+  }
+
 }
 
 extension vcViewMoreBook: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -45,5 +50,12 @@ extension vcViewMoreBook: UICollectionViewDataSource, UICollectionViewDelegate {
     guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookshelfItem.identifier, for: indexPath) as? BookshelfItem else { return UICollectionViewCell(frame: .zero) }
     cell.configureCell(book: "OK")
     return cell
+  }
+
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let sb = UIStoryboard(name: "Main", bundle: nil)
+    guard let vc = sb.instantiateViewController(withIdentifier: "vcViewBook") as? vcViewBook else { return }
+    // TODO: - Send in category or some type of identifier for books
+    self.present(vc, animated: true, completion: nil)
   }
 }

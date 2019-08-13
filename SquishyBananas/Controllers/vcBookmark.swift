@@ -34,4 +34,11 @@ extension vcBookmark: UICollectionViewDataSource, UICollectionViewDelegate {
     cell.configureCell(book: "OK")
     return cell
   }
+
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let sb = UIStoryboard(name: "Main", bundle: nil)
+    guard let vc = sb.instantiateViewController(withIdentifier: "vcViewBook") as? vcViewBook else { return }
+    // TODO: - Send in category or some type of identifier for books
+    self.present(vc, animated: true, completion: nil)
+  }
 }
