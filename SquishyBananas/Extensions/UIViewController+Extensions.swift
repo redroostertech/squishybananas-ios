@@ -8,8 +8,10 @@ extension UIViewController {
         let yourBackImage = UIImage(named: image)
         self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
-        self.navigationController?.clearNavigationBackButtonText()
-        self.navigationItem.backBarButtonItem?.title = title
+    self.navigationItem.backBarButtonItem = UIBarButtonItem(title: title, style: UIBarButtonItem.Style.plain, target: nil, action: nil)
+
+//        self.navigationController?.clearNavigationBackButtonText()
+//        self.navigationItem.backBarButtonItem?.title = "OK"
   }
     
     func hideNavigationBarHairline() {

@@ -79,6 +79,13 @@
 		D7981FD623030EF1004FFE0B /* BookFromAuthorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7981FD423030EF1004FFE0B /* BookFromAuthorCell.xib */; };
 		D798200B2303D277004FFE0B /* ContactListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79820092303D277004FFE0B /* ContactListCell.swift */; };
 		D798200C2303D277004FFE0B /* ContactListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D798200A2303D277004FFE0B /* ContactListCell.xib */; };
+		D79820132304263B004FFE0B /* CAPSPageMenu+UIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D798200D2304263A004FFE0B /* CAPSPageMenu+UIConfiguration.swift */; };
+		D79820142304263B004FFE0B /* CAPSPageMenu+UIScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D798200E2304263A004FFE0B /* CAPSPageMenu+UIScrollViewDelegate.swift */; };
+		D79820152304263B004FFE0B /* CAPSPageMenuConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D798200F2304263A004FFE0B /* CAPSPageMenuConfiguration.swift */; };
+		D79820162304263B004FFE0B /* CAPSPageMenu+Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79820102304263A004FFE0B /* CAPSPageMenu+Options.swift */; };
+		D79820172304263B004FFE0B /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79820112304263B004FFE0B /* CAPSPageMenu.swift */; };
+		D79820182304263B004FFE0B /* CAPSPageMenu+UIGestureRecognizerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79820122304263B004FFE0B /* CAPSPageMenu+UIGestureRecognizerDelegate.swift */; };
+		D798201B230427CE004FFE0B /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D798201A230427CE004FFE0B /* MenuItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,6 +164,13 @@
 		D7981FD423030EF1004FFE0B /* BookFromAuthorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookFromAuthorCell.xib; sourceTree = "<group>"; };
 		D79820092303D277004FFE0B /* ContactListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListCell.swift; sourceTree = "<group>"; };
 		D798200A2303D277004FFE0B /* ContactListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactListCell.xib; sourceTree = "<group>"; };
+		D798200D2304263A004FFE0B /* CAPSPageMenu+UIConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAPSPageMenu+UIConfiguration.swift"; sourceTree = "<group>"; };
+		D798200E2304263A004FFE0B /* CAPSPageMenu+UIScrollViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAPSPageMenu+UIScrollViewDelegate.swift"; sourceTree = "<group>"; };
+		D798200F2304263A004FFE0B /* CAPSPageMenuConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenuConfiguration.swift; sourceTree = "<group>"; };
+		D79820102304263A004FFE0B /* CAPSPageMenu+Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAPSPageMenu+Options.swift"; sourceTree = "<group>"; };
+		D79820112304263B004FFE0B /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
+		D79820122304263B004FFE0B /* CAPSPageMenu+UIGestureRecognizerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAPSPageMenu+UIGestureRecognizerDelegate.swift"; sourceTree = "<group>"; };
+		D798201A230427CE004FFE0B /* MenuItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 		DC2571E8464BAA5502434B6C /* Pods_SquishyBananas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SquishyBananas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -214,6 +228,7 @@
 				D7981CEF22FC52F6004FFE0B /* SquishyBananas.xcdatamodeld */,
 				D7981CE822FC52F6004FFE0B /* AppDelegate.swift */,
 				D7981D7122FF54BB004FFE0B /* Configuration.swift */,
+				D798201923042658004FFE0B /* PageMenu */,
 				D7981D0E22FE209A004FFE0B /* Resources */,
 				D7981D0922FDAAF1004FFE0B /* Walkthrough */,
 				D7981D0D22FE2055004FFE0B /* Controllers */,
@@ -356,6 +371,20 @@
 				D7981D7622FF5D40004FFE0B /* CustomView+Designable.swift */,
 			);
 			path = Designables;
+			sourceTree = "<group>";
+		};
+		D798201923042658004FFE0B /* PageMenu */ = {
+			isa = PBXGroup;
+			children = (
+				D79820112304263B004FFE0B /* CAPSPageMenu.swift */,
+				D79820102304263A004FFE0B /* CAPSPageMenu+Options.swift */,
+				D798200D2304263A004FFE0B /* CAPSPageMenu+UIConfiguration.swift */,
+				D79820122304263B004FFE0B /* CAPSPageMenu+UIGestureRecognizerDelegate.swift */,
+				D798200E2304263A004FFE0B /* CAPSPageMenu+UIScrollViewDelegate.swift */,
+				D798200F2304263A004FFE0B /* CAPSPageMenuConfiguration.swift */,
+				D798201A230427CE004FFE0B /* MenuItemView.swift */,
+			);
+			path = PageMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -503,8 +532,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D798201B230427CE004FFE0B /* MenuItemView.swift in Sources */,
 				D7981D2022FE230F004FFE0B /* vcProfile.swift in Sources */,
 				D7981D84230117C1004FFE0B /* BookInfoDetailCell.swift in Sources */,
+				D79820172304263B004FFE0B /* CAPSPageMenu.swift in Sources */,
 				D7981D6A22FF5047004FFE0B /* UIButton+Extensions.swift in Sources */,
 				D7981D5D22FF5047004FFE0B /* Strings+Extensions.swift in Sources */,
 				D7981D6122FF5047004FFE0B /* Doubles+Extensions.swift in Sources */,
@@ -516,12 +547,14 @@
 				D7981D5622FF5047004FFE0B /* Array+Extensions.swift in Sources */,
 				D7981D2222FE2321004FFE0B /* vcViewMoreBook.swift in Sources */,
 				D7981D6622FF5047004FFE0B /* UITextField+Extensions.swift in Sources */,
+				D79820142304263B004FFE0B /* CAPSPageMenu+UIScrollViewDelegate.swift in Sources */,
 				D7981D6322FF5047004FFE0B /* DateFormatter+Extensions.swift in Sources */,
 				D7981D6522FF5047004FFE0B /* AttributedString+Extensions.swift in Sources */,
 				D7981D5822FF5047004FFE0B /* UIDevice+Extensions.swift in Sources */,
 				D7981D5A22FF5047004FFE0B /* Constraints+Extensions.swift in Sources */,
 				D7981D7722FF5D40004FFE0B /* CustomView+Designable.swift in Sources */,
 				D7981D2422FE2332004FFE0B /* vcViewBook.swift in Sources */,
+				D79820132304263B004FFE0B /* CAPSPageMenu+UIConfiguration.swift in Sources */,
 				D7981D2622FE2342004FFE0B /* vcContactList.swift in Sources */,
 				D7981CEB22FC52F6004FFE0B /* vcHome.swift in Sources */,
 				D7981D6022FF5047004FFE0B /* UILabel+Extensions.swift in Sources */,
@@ -530,6 +563,7 @@
 				D7981D7222FF54BB004FFE0B /* Configuration.swift in Sources */,
 				D7981CF122FC52F6004FFE0B /* SquishyBananas.xcdatamodeld in Sources */,
 				D798200B2303D277004FFE0B /* ContactListCell.swift in Sources */,
+				D79820152304263B004FFE0B /* CAPSPageMenuConfiguration.swift in Sources */,
 				D7981D812300675B004FFE0B /* Walkthrough_4.swift in Sources */,
 				D7981D5722FF5047004FFE0B /* JSONStringToIntTransform.swift in Sources */,
 				D7981D6722FF5047004FFE0B /* UITableView+Extensions.swift in Sources */,
@@ -550,7 +584,9 @@
 				D7981D1222FE21CE004FFE0B /* vcCustomTabBar.swift in Sources */,
 				D7981D7422FF55A8004FFE0B /* CustomLabel+Designable.swift in Sources */,
 				D7981FD523030EF1004FFE0B /* BookFromAuthorCell.swift in Sources */,
+				D79820162304263B004FFE0B /* CAPSPageMenu+Options.swift in Sources */,
 				D7981D6422FF5047004FFE0B /* CustomStringConvertible+Extensions.swift in Sources */,
+				D79820182304263B004FFE0B /* CAPSPageMenu+UIGestureRecognizerDelegate.swift in Sources */,
 				D7981D6D22FF546F004FFE0B /* RandomStringGenerator.swift in Sources */,
 				D7981D5422FF5047004FFE0B /* UIColors+Extensions.swift in Sources */,
 				D7981D5B22FF5047004FFE0B /* UIViewController+Extensions.swift in Sources */,

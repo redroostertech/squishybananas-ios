@@ -11,19 +11,16 @@ import UIKit
 class vcViewMoreBook: UIViewController {
 
   @IBOutlet weak var mainCollection: UICollectionView!
-  @IBOutlet weak var backButton: UIButton!
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    mainCollection.setCollectionViewLayout(LayoutManager.vertical.three_col_margin, animated: true)
+    loadCustomBackButton(withImage: "back")
+
+    mainCollection.setCollectionViewLayout(LayoutManager.vertical.three_col_margin_no_footer, animated: true)
     mainCollection.register(BookshelfItem.nib, forCellWithReuseIdentifier: BookshelfItem.identifier)
     mainCollection.register(BookshelfSectionHeader.nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: BookshelfSectionHeader.identifier)
 
     mainCollection.reloadData()
-  }
-
-  @IBAction func goBack(_ sender: UIButton) {
-    self.dismiss(animated: true, completion: nil)
   }
 
 }
@@ -56,6 +53,6 @@ extension vcViewMoreBook: UICollectionViewDataSource, UICollectionViewDelegate {
     let sb = UIStoryboard(name: "Main", bundle: nil)
     guard let vc = sb.instantiateViewController(withIdentifier: "vcViewBook") as? vcViewBook else { return }
     // TODO: - Send in category or some type of identifier for books
-    self.present(vc, animated: true, completion: nil)
+    self.navigationController?.pushViewController(vc, animated: true)
   }
 }

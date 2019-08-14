@@ -7,24 +7,37 @@
 //
 
 import UIKit
+import SDWebImage
 
-class vcCustomTabBar: UITabBarController {
+private let arrayOfImagesForTabBar = [ "bookshelf", "bookmark", "user"]
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+class vcCustomTabBar: UITabBarController, UITabBarControllerDelegate {
 
-        // Do any additional setup after loading the view.
+  // MARK: - Lifecycle methods
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    setupTabBarItems()
+  }
+
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+  }
+
+  // MARK: - Private member functions
+  private func setupTabBarItems() {
+    guard let arrayOfTabBarItems = self.tabBar.items else { return }
+    let selectedColor = UIColor.squishyYellow
+    let unselectedColor = UIColor.white
+    var count = 0
+    for tabBarItem in arrayOfTabBarItems {
+      tabBarItem.tag = count
+      tabBarItem.image = UIImage(named: arrayOfImagesForTabBar[count])
+      tabBarItem.selectedImage = UIImage(named: arrayOfImagesForTabBar[count] + "-selected")
+      tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: unselectedColor],
+                                        for: .normal)
+      tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: selectedColor],
+                                        for: .selected)
+      count += 1
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  }
 }

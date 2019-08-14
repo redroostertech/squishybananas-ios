@@ -61,6 +61,18 @@ class LayoutManager {
         layout.footerReferenceSize = CGSize(width: kWidthOfScreen, height: 50.0)
         return layout
       }
+
+      static var three_col_margin_no_footer: UICollectionViewFlowLayout {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.itemSize = CGSize(width: (kWidthOfScreen / 3) - (kPlugInColCellInsets + (kPlugInColCellInsets / 3)), height: kPlugInColCellHeight)
+        layout.minimumLineSpacing = kPrimarySpacing
+        layout.minimumInteritemSpacing = kPrimarySpacing
+        layout.sectionInset = UIEdgeInsets(top: kPlugInColCellInsets, left: kPlugInColCellInsets, bottom: kPlugInColCellInsets, right: kPlugInColCellInsets)
+        layout.headerReferenceSize = CGSize(width: kWidthOfScreen, height: 50.0)
+        return layout
+      }
+
       static var three_col_margin_no_header_footer: UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical

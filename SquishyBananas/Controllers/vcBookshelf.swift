@@ -14,6 +14,8 @@ class vcBookshelf: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    loadCustomBackButton(withImage: "back")
+    hideNavigationBarHairline()
     mainCollection.setCollectionViewLayout(LayoutManager.vertical.three_col_margin, animated: true)
     mainCollection.register(BookshelfItem.nib, forCellWithReuseIdentifier: BookshelfItem.identifier)
     mainCollection.register(BookshelfSectionHeader.nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: BookshelfSectionHeader.identifier)
@@ -54,7 +56,7 @@ extension vcBookshelf: UICollectionViewDataSource, UICollectionViewDelegate {
     let sb = UIStoryboard(name: "Main", bundle: nil)
     guard let vc = sb.instantiateViewController(withIdentifier: "vcViewBook") as? vcViewBook else { return }
     // TODO: - Send in category or some type of identifier for books
-    self.present(vc, animated: true, completion: nil)
+    self.navigationController?.pushViewController(vc, animated: true)
   }
 }
 
@@ -63,6 +65,6 @@ extension vcBookshelf: BookshelfSectionDelegate {
     let sb = UIStoryboard(name: "Main", bundle: nil)
     guard let vc = sb.instantiateViewController(withIdentifier: "vcViewMoreBook") as? vcViewMoreBook else { return }
     // TODO: - Send in category or some type of identifier for books
-    self.present(vc, animated: true, completion: nil)
+    self.navigationController?.pushViewController(vc, animated: true)
   }
 }

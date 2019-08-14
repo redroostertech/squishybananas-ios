@@ -14,6 +14,9 @@ class vcBookmark: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    loadCustomBackButton(withImage: "back")
+    hideNavigationBarHairline()
+
     mainCollection.setCollectionViewLayout(LayoutManager.vertical.three_col_margin_no_header_footer, animated: true)
     mainCollection.register(BookshelfItem.nib, forCellWithReuseIdentifier: BookshelfItem.identifier)
     mainCollection.reloadData()
@@ -39,6 +42,6 @@ extension vcBookmark: UICollectionViewDataSource, UICollectionViewDelegate {
     let sb = UIStoryboard(name: "Main", bundle: nil)
     guard let vc = sb.instantiateViewController(withIdentifier: "vcViewBook") as? vcViewBook else { return }
     // TODO: - Send in category or some type of identifier for books
-    self.present(vc, animated: true, completion: nil)
+    self.navigationController?.pushViewController(vc, animated: true)
   }
 }

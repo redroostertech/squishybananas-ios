@@ -11,21 +11,19 @@ import UIKit
 class vcViewBook: UIViewController {
 
   @IBOutlet weak var mainCollection: UITableView!
-  @IBOutlet weak var backButton: UIButton!
 
   var book: Any?
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    loadCustomBackButton(withImage: "back")
+
     mainCollection.register(BookInfoDetailCell.nib, forCellReuseIdentifier: BookInfoDetailCell.identifier)
     mainCollection.register(BookSynopsisCell.nib, forCellReuseIdentifier: BookSynopsisCell.identifier)
     mainCollection.register(BookFromAuthorCell.nib, forCellReuseIdentifier: BookFromAuthorCell.identifier)
     mainCollection.estimatedRowHeight = UITableView.automaticDimension
     mainCollection.reloadData()
-  }
-
-  @IBAction func goBack(_ sender: UIButton) {
-    self.dismiss(animated: true, completion: nil)
   }
 
 }
@@ -65,14 +63,14 @@ extension vcViewBook: BookFromAuthorCellDelegate {
     let sb = UIStoryboard(name: "Main", bundle: nil)
     guard let vc = sb.instantiateViewController(withIdentifier: "vcViewMoreBook") as? vcViewMoreBook else { return }
     // TODO: - Send in category or some type of identifier for books
-    self.present(vc, animated: true, completion: nil)
+    self.navigationController?.pushViewController(vc, animated: true)
   }
 
   func bookFromAuhtor(_ cell: UITableViewCell, viewBook: Int) {
     let sb = UIStoryboard(name: "Main", bundle: nil)
     guard let vc = sb.instantiateViewController(withIdentifier: "vcViewBook") as? vcViewBook else { return }
     // TODO: - Send in category or some type of identifier for books
-    self.present(vc, animated: true, completion: nil)
+    self.navigationController?.pushViewController(vc, animated: true)
   }
 }
 

@@ -10,21 +10,35 @@ import UIKit
 
 class vcRecentBooks: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  @IBOutlet weak var mainCollection: UICollectionView!
 
-        // Do any additional setup after loading the view.
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    mainCollection.setCollectionViewLayout(LayoutManager.vertical.three_col_margin_no_header_footer, animated: true)
+    mainCollection.register(BookshelfItem.nib, forCellWithReuseIdentifier: BookshelfItem.identifier)
+    mainCollection.reloadData()
+  }
+}
 
+extension vcRecentBooks: UICollectionViewDataSource, UICollectionViewDelegate {
+  func numberOfSections(in collectionView: UICollectionView) -> Int {
+    return 3
+  }
 
-    /*
-    // MARK: - Navigation
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return 6
+  }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookshelfItem.identifier, for: indexPath) as? BookshelfItem else { return UICollectionViewCell(frame: .zero) }
+    cell.configureCell(book: "OK")
+    return cell
+  }
 
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let sb = UIStoryboard(name: "Main", bundle: nil)
+    guard let vc = sb.instantiateViewController(withIdentifier: "vcViewBook") as? vcViewBook else { return }
+    // TODO: - Send in category or some type of identifier for books
+    self.navigationController?.pushViewController(vc, animated: true)
+  }
 }
