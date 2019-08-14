@@ -9,7 +9,8 @@
 import UIKit
 
 protocol BookDetailDelegate: class {
-
+  func book(_ cell: UITableViewCell, book: Any?, read: Bool)
+  func book(_ cell: UITableViewCell, book: Any?, bookmark: Bool)
 }
 
 class BookInfoDetailCell: UITableViewCell {
@@ -46,8 +47,10 @@ class BookInfoDetailCell: UITableViewCell {
   }
 
   @IBAction func action(_ sender: UIButton) {
+    self.delegate?.book(self, book: self.book, read: true)
   }
 
   @IBAction func bookmark(_ sender: UIButton) {
+    self.delegate?.book(self, book: self.book, bookmark: true)
   }
 }

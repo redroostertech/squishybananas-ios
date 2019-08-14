@@ -140,7 +140,7 @@
                                 </state>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="cbg-bb-qJk">
-                                <rect key="frame" x="66" y="76" width="282" height="150"/>
+                                <rect key="frame" x="66" y="76" width="282.00000000000045" height="150.00000000000045"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="bYj-Nb-czV"/>
                                 </constraints>
@@ -545,24 +545,62 @@
                                                 <state key="normal" image="back">
                                                     <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="goBack:" destination="pRl-k9-56y" eventType="touchUpInside" id="Nuq-QZ-Pdo"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mY9-Di-aIl">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HOB-XC-51g">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="pRl-k9-56y" id="2xf-bE-xAV"/>
+                                    <outlet property="delegate" destination="pRl-k9-56y" id="QvI-JC-3FV"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5E-s3-BHo">
+                                <rect key="frame" x="144.5" y="56.5" width="125" height="19.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="2lE-Vl-5UT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Rv6-wQ-6OZ" firstAttribute="top" secondItem="v7c-T4-HkA" secondAttribute="top" id="DPo-0a-XcT"/>
                             <constraint firstItem="Rv6-wQ-6OZ" firstAttribute="leading" secondItem="v7c-T4-HkA" secondAttribute="leading" id="EEQ-yP-I0e"/>
+                            <constraint firstItem="v7c-T4-HkA" firstAttribute="bottom" secondItem="mY9-Di-aIl" secondAttribute="bottom" id="EaH-jT-C5y"/>
+                            <constraint firstItem="mY9-Di-aIl" firstAttribute="leading" secondItem="v7c-T4-HkA" secondAttribute="leading" id="IaW-hN-Xf3"/>
+                            <constraint firstItem="x5E-s3-BHo" firstAttribute="centerY" secondItem="Rv6-wQ-6OZ" secondAttribute="centerY" id="LDP-0L-nJ4"/>
+                            <constraint firstItem="mY9-Di-aIl" firstAttribute="top" secondItem="Rv6-wQ-6OZ" secondAttribute="bottom" id="Nvb-Ka-XSB"/>
+                            <constraint firstItem="v7c-T4-HkA" firstAttribute="trailing" secondItem="mY9-Di-aIl" secondAttribute="trailing" id="dji-Ba-RTd"/>
+                            <constraint firstItem="x5E-s3-BHo" firstAttribute="centerX" secondItem="Rv6-wQ-6OZ" secondAttribute="centerX" id="lrA-Bz-4vn"/>
                             <constraint firstItem="Rv6-wQ-6OZ" firstAttribute="trailing" secondItem="v7c-T4-HkA" secondAttribute="trailing" id="yYU-I2-d1K"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="v7c-T4-HkA"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="k9P-21-GIe" id="wVL-zz-60v"/>
+                        <outlet property="mainCollection" destination="mY9-Di-aIl" id="ASp-q6-llL"/>
+                        <outlet property="titleLabel" destination="x5E-s3-BHo" id="fu5-nu-95B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5AL-YO-5qt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1503" y="413"/>
+            <point key="canvasLocation" x="1502.8985507246377" y="412.5"/>
         </scene>
     </scenes>
     <resources>

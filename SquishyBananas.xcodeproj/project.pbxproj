@@ -77,6 +77,8 @@
 		D7981FD223020E70004FFE0B /* BookSynopsisCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7981FD023020E70004FFE0B /* BookSynopsisCell.xib */; };
 		D7981FD523030EF1004FFE0B /* BookFromAuthorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7981FD323030EF1004FFE0B /* BookFromAuthorCell.swift */; };
 		D7981FD623030EF1004FFE0B /* BookFromAuthorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7981FD423030EF1004FFE0B /* BookFromAuthorCell.xib */; };
+		D798200B2303D277004FFE0B /* ContactListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79820092303D277004FFE0B /* ContactListCell.swift */; };
+		D798200C2303D277004FFE0B /* ContactListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D798200A2303D277004FFE0B /* ContactListCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -153,6 +155,8 @@
 		D7981FD023020E70004FFE0B /* BookSynopsisCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookSynopsisCell.xib; sourceTree = "<group>"; };
 		D7981FD323030EF1004FFE0B /* BookFromAuthorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFromAuthorCell.swift; sourceTree = "<group>"; };
 		D7981FD423030EF1004FFE0B /* BookFromAuthorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookFromAuthorCell.xib; sourceTree = "<group>"; };
+		D79820092303D277004FFE0B /* ContactListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListCell.swift; sourceTree = "<group>"; };
+		D798200A2303D277004FFE0B /* ContactListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactListCell.xib; sourceTree = "<group>"; };
 		DC2571E8464BAA5502434B6C /* Pods_SquishyBananas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SquishyBananas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -270,6 +274,8 @@
 				D7981FD023020E70004FFE0B /* BookSynopsisCell.xib */,
 				D7981FD323030EF1004FFE0B /* BookFromAuthorCell.swift */,
 				D7981FD423030EF1004FFE0B /* BookFromAuthorCell.xib */,
+				D79820092303D277004FFE0B /* ContactListCell.swift */,
+				D798200A2303D277004FFE0B /* ContactListCell.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -424,6 +430,7 @@
 				D7981D3622FF4F9A004FFE0B /* BookshelfItem.xib in Resources */,
 				D7981D0822FDA9D9004FFE0B /* Walkthrough_4.xib in Resources */,
 				D7981CF322FC52F8004FFE0B /* Assets.xcassets in Resources */,
+				D798200C2303D277004FFE0B /* ContactListCell.xib in Resources */,
 				D7981D3222FF3EB7004FFE0B /* BookshelfSectionFooter.xib in Resources */,
 				D7981D0622FDA9C9004FFE0B /* Walkthrough_3.xib in Resources */,
 				D7981CEE22FC52F6004FFE0B /* Main.storyboard in Resources */,
@@ -522,6 +529,7 @@
 				D7981D5E22FF5047004FFE0B /* UIView+Extensions.swift in Sources */,
 				D7981D7222FF54BB004FFE0B /* Configuration.swift in Sources */,
 				D7981CF122FC52F6004FFE0B /* SquishyBananas.xcdatamodeld in Sources */,
+				D798200B2303D277004FFE0B /* ContactListCell.swift in Sources */,
 				D7981D812300675B004FFE0B /* Walkthrough_4.swift in Sources */,
 				D7981D5722FF5047004FFE0B /* JSONStringToIntTransform.swift in Sources */,
 				D7981D6722FF5047004FFE0B /* UITableView+Extensions.swift in Sources */,

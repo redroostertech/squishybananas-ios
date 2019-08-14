@@ -9,6 +9,27 @@ extension UIColor {
                        blue: 39/255,
                        alpha: 1.0)
     }
+
+  @nonobjc class var squishyBlue: UIColor {
+    return UIColor(red: 74/255,
+                   green: 144/255,
+                   blue: 226/255,
+                   alpha: 1.0)
+  }
+
+  @nonobjc class var squishyYellow: UIColor {
+    return UIColor(red: 246/255,
+                   green: 223/255,
+                   blue: 48/255,
+                   alpha: 1.0)
+  }
+
+  @nonobjc class var squishyGreen: UIColor {
+    return UIColor(red: 0/255,
+                   green: 198/255,
+                   blue: 149/255,
+                   alpha: 1.0)
+  }
     
     public convenience init?(hexString: String) {
         let r, g, b, a: CGFloat

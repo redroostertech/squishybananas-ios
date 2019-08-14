@@ -39,7 +39,7 @@ extension vcViewBook: UITableViewDelegate, UITableViewDataSource {
     switch indexPath.row {
     case 0:
       guard let cell = tableView.dequeueReusableCell(withIdentifier: BookInfoDetailCell.identifier) as? BookInfoDetailCell else { return UITableViewCell(frame: .zero) }
-      cell.configure(bookImage: "", bookTitle: "Harry Potter and Soceror's Stone", authorImage: "", authorName: "JK Rowling", bookPrice: 12.99, pagesCount: 134, book: nil, delegate: nil)
+      cell.configure(bookImage: "", bookTitle: "Harry Potter and Soceror's Stone", authorImage: "", authorName: "JK Rowling", bookPrice: 12.99, pagesCount: 134, book: nil, delegate: self)
       return cell
     case 1:
       guard let cell = tableView.dequeueReusableCell(withIdentifier: BookSynopsisCell.identifier) as? BookSynopsisCell else { return UITableViewCell(frame: .zero) }
@@ -73,5 +73,19 @@ extension vcViewBook: BookFromAuthorCellDelegate {
     guard let vc = sb.instantiateViewController(withIdentifier: "vcViewBook") as? vcViewBook else { return }
     // TODO: - Send in category or some type of identifier for books
     self.present(vc, animated: true, completion: nil)
+  }
+}
+
+extension vcViewBook: BookDetailDelegate {
+  func book(_ cell: UITableViewCell, book: Any?, read: Bool) {
+    let sb = UIStoryboard(name: "Main", bundle: nil)
+    guard let vc = sb.instantiateViewController(withIdentifier: "vcContactList") as? vcContactList else { return }
+    // TODO: - Send in category or some type of identifier for books
+    vc.viewType = .read
+    self.present(vc, animated: true, completion: nil)
+  }
+
+  func book(_ cell: UITableViewCell, book: Any?, bookmark: Bool) {
+    print("Bookmark")
   }
 }
